@@ -9,7 +9,38 @@
     <title>Desperdício</title>
     <script src="script.js"></script>
 </head>
-<body>
+<body onload="Start()">
+    <script>
+    let x = 3;
+    let y = 0;
+    let copyAdditive = 18;
+    let local = "";
+    function Start()
+    {
+        const a = document.getElementById("wateranimation");
+        local = " " + a.textContent;
+        for(let i = 0; i < (copyAdditive - 1);i++)
+        {
+            a.textContent = a.textContent + local;
+        }
+        setInterval(updateWater, 10);
+    }
+
+
+    function updateWater()
+    {
+        const a = document.getElementById("wateranimation");
+        x = x + 0.05;
+        a.style.right = x + "%";
+
+        let cur = (x / 5 * 100).toString();
+        if(cur.includes("5"))
+        {
+        a.textContent = a.textContent + local; 
+        }
+    }
+    </script>
+
     <div class="square-create" style="height: 10%;width: 100%; top: 0%; left:0%;background: linear-gradient(to bottom, #42e773 0%, #42e773 100%);"><h1 style="font-size: 150%; text-align: center; font-family:'Courier New';position: inherit; top:20%; right: 42%;">Desperdício de Água.</h1></div>
     <div><img src="planet-icon-14823.png" id="menuBar" style ="position:absolute; height: 8%;width: 4%; top:1%; line-height: 10%;"></img></div>
     
@@ -19,21 +50,21 @@
     <p style="line-height: 40%;">Contudo, os sistemas de água doce do planeta estão se extinguindo. Em todo o mundo, as populações de espécies monitoradas que vivem em água doce reduziram</p>
     <p style="line-height: 40%;">em média 83% desde 1970. Já perdemos 64% das terras úmidas do planeta desde 1900, e apenas 37% dos rios mais longos permanecem desimpedidos e fluindo livremente."</p>
     
-    <img src="https://img.freepik.com/fotos-gratis/closeup-tiro-de-uma-garrafa-de-agua-de-plastico-em-uma-mao-humana-perfeita-para-o-conceito-de-desperdicio-de-agua_181624-46747.jpg?w=996&t=st=1690286682~exp=1690287282~hmac=7f5d576a066323f04847932613682fce2e2f2f4691e02cdc14d9490175aeda4e" style ="position:absolute; height:50%;width: 45%; top:26.6%; left:4%"></img>
-    <div class="square-create" style="height: 50%;width: 47%; top:26.5%; left:52%;background: linear-gradient(to bottom, #42e773 0%, #42e773 100%);"><h1 style="font-size: 150%; text-align: center; font-family:'Courier New';position: inherit; top:20%; right: 45%;"></div>
-    <p style="position:absolute ; font-size: 120%; width: 45%; left:53%; top:26%; text-align: left; font-family:'Courier New'; line-height: 150%;">“De um lado, o estado [do Maranhão] fica mais distante da universalização do abastecimento de água para a sua população, que é, inclusive, uma meta nacional, estipulada pelo Marco Legal do Saneamento, e, paralelamente, isso leva a um cenário em que os investimentos em infraestrutura se tornam muito maiores para fazer com que a água chegue às pessoas. Por exemplo: na construção de equipamentos que não precisariam ser construídos, caso houvesse uma gestão adequada das perdas. Sem contar no consumo energético, no consumo de produtos químicos, no esforço de trabalho que está sendo pedido, também, para produzir uma água que sequer chega às pessoas”.</p>
+    <img src="https://img.freepik.com/fotos-gratis/closeup-tiro-de-uma-garrafa-de-agua-de-plastico-em-uma-mao-humana-perfeita-para-o-conceito-de-desperdicio-de-agua_181624-46747.jpg?w=996&t=st=1690286682~exp=1690287282~hmac=7f5d576a066323f04847932613682fce2e2f2f4691e02cdc14d9490175aeda4e" style ="height:50%;width: 45%; top:26.6%; left:4%"></img>
+    <div class="square-create" style="height: 50%;width: 47%; top:26.5%; left:52%;background: linear-gradient(to bottom, #42e773 0%, #42e773 100%);"></div>
+    <p style="position:absolute ; font-size: 120%; width: 45%; left:53%; top:26%; text-align: left; line-height: 150%;" class="diffFont">“De um lado, o estado [do Maranhão] fica mais distante da universalização do abastecimento de água para a sua população, que é, inclusive, uma meta nacional, estipulada pelo Marco Legal do Saneamento, e, paralelamente, isso leva a um cenário em que os investimentos em infraestrutura se tornam muito maiores para fazer com que a água chegue às pessoas. Por exemplo: na construção de equipamentos que não precisariam ser construídos, caso houvesse uma gestão adequada das perdas. Sem contar no consumo energético, no consumo de produtos químicos, no esforço de trabalho que está sendo pedido, também, para produzir uma água que sequer chega às pessoas”.</p>
     <inv style="line-height: 3700%; position: relative; top:100%; right: 10%;">SAMPLE TEXT.</inv>
 
     <p style="line-height: 40%;">Entre os dias 22 e 24 de março, líderes de todo o mundo estiveram reunidos em Nova Iorque para a Conferência da ONU sobre a Água – formalmente conhecida</p>
     <p style="line-height: 40%;">como Conferência de 2023 para a Revisão Integral de Meio Termo da Implementação da Década das Nações Unidas para Ação sobre Água e Saneamento (2018-2028). </p>
     
-    <div class="square-create" style="position: absolute; height: 56%;width: 46%; top:95.5%; left:24.5%;background: linear-gradient(to bottom, #42e773 0%, #42e773 100%);"><h1 style="font-size: 150%; text-align: center; font-family:'Courier New';position: inherit; top:20%; right: 45%;"></div>
-    <img style ="position: absolute; height:50%;width: 45%; left:25%; top: 96%;" src="https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/a/u/AUS_18537848714.jpg?crop=0%2C254%2C4368%2C2402&wid=2000&hei=1100&scl=2.184"></img>
-    <p style ="font-size:160%; position: absolute; text-align: center; right:51%; top: 145%; color: white;">H2O</p>
+    <div class="square-create" style="height: 56%;width: 46%; top:95.5%; left:24.5%;background: linear-gradient(to bottom, #42e773 0%, #42e773 100%);"><h1 style="font-size: 150%; text-align: center; position: inherit; top:20%; right: 45%;"></div>
+    <img style ="height:50%;width: 45%; left:25%; top: 96%;" src="https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/a/u/AUS_18537848714.jpg?crop=0%2C254%2C4368%2C2402&wid=2000&hei=1100&scl=2.184"></img>
+    <p style ="font-size:160%; position: absolute; text-align: center; right:51%; top: 145%;" class="whiteFont" >H2O</p>
 
 
-    <div class="square-create" style="position: absolute; height: 57%;width: 47%; top:160%; left:46%;background: linear-gradient(to bottom, #42e773 0%, #42e773 100%);"><h1 style="font-size: 150%; text-align: center; font-family:'Courier New';position: inherit; top:20%; right: 45%;"></div>
-    <all1 style="position:absolute ; font-size: 120%; width: 45%; left:47%; top:160%; text-align: left; font-family:'Courier New'; line-height: 150%;">
+    <div class="square-create" style="position: absolute; height: 57%;width: 47%; top:160%; left:46%;background: linear-gradient(to bottom, #42e773 0%, #42e773 100%);"><h1 style="font-size: 150%; text-align: center; position: inherit; top:20%; right: 45%;"></div>
+    <all1 style="font-size: 120%; width: 45%; left:47%; top:160%; text-align: left; line-height: 150%;"  class="diffFont">
     <p style="text-align: left;">"O que causa o desperdício de água?</p>
         <ul style="text-align: left;">O desperdício de água tem quatro principais causas:
             <li style="text-align: left;">O uso exagerado e pouco eficiente desse recurso natural. Nesses casos, o volume de água que é utilizado para a prática de determinada atividade ultrapassa a quantidade que seria, de fato, necessária para tal.</li>
@@ -42,13 +73,13 @@
             <li style="text-align: left;">Superexploração de água e o manejo inadequado desse recurso natural, especialmente quando consideramos os agentes econômicos que são os maiores responsáveis pelo consumo de água na atualidade, como a agropecuária e a indústria."</li>
         </ul>
     </all1>
-    <img style ="position: absolute; height:40%;width: 40%; left:4%; top: 162%;" src="https://img.freepik.com/fotos-premium/salve-a-agua-gota-de-agua-da-torneira-de-agua-desperdicio-de-agua-torneira-de-grama-no-fundo-da-natureza_29266-74.jpg?w=2000"></img>
+    <img style ="height:40%;width: 40%; left:4%; top: 162%;" src="https://img.freepik.com/fotos-premium/salve-a-agua-gota-de-agua-da-torneira-de-agua-desperdicio-de-agua-torneira-de-grama-no-fundo-da-natureza_29266-74.jpg?w=2000"></img>
 
 
-    <div class="square-create" style="position: absolute; height: 90%;width: 53%; top:230%; left:25%;background: linear-gradient(to bottom, #42e773 0%, #42e773 100%);"><h1 style="font-size: 150%; text-align: center; font-family:'Courier New';position: inherit; top:20%; right: 45%;"></div>
+    <div class="square-create" style="position: absolute; height: 90%;width: 53%; top:230%; left:25%;background: linear-gradient(to bottom, #42e773 0%, #42e773 100%);"><h1 style="font-size: 150%; text-align: center; position: inherit; top:20%; right: 45%;"></div>
 
 
-    <all1 style="text-align: center; position: absolute;top:230%; left: 29%; font-family:'Courier New'; line-height: 150%; font-size: 120%;">
+    <all1 style="text-align: center; top:230%; left: 29%; line-height: 150%; font-size: 120%;"  class="diffFont">
         <p style="width: 60%;">"Como evitar o desperdício de água? A água doce, utilizada para o consumo humano, é um recurso bastante limitado no nosso planeta, pois representa somente 2% de todo o volume de água presente na Terra, e, desse, quase 70% estão congelados e represados nas geleiras. Por essa razão, é preciso evitar o desperdício de água e realizar o uso desse recurso natural de maneira sustentável. Algumas ações que diminuem ou impedem o desperdício de água estão listadas a seguir.</p>
         
         <ul style="text-align: left; position: absolute; right: 39%; width: 60%; top: 130%;">
@@ -65,13 +96,15 @@
         </ul>
 </ul>
 </all1>
-<p style="width: 20%; position: absolute;top: 330%; right: 41%; font-family:'Courier New'; text-align: center; font-size: 160%;">Diga não ao disperdício de água.</p>
+<p style="width: 20%; position: absolute;top: 330%; right: 41%; text-align: center; font-size: 160%;"  class="diffFont">Diga não ao disperdício de água.</p>
 
-<div><img src="planet-icon-14823.png" id="menuBar" style ="position:absolute; height: 8%;width: 4%; top:347%; right: 49%;"></img></div>
+<div><img src="planet-icon-14823.png" id="menuBar" style ="height: 8%;width: 4%; top:347%; right: 49%;"></img></div>
 
-<div class="square-create" style="position: absolute; height: 40%;width: 100%; top:370%; left:0%;background: linear-gradient(to bottom, #111111 0%, #1b1b1b 100%);"><h1 style="font-size: 150%; text-align: center; font-family:'Courier New';position: inherit; top:20%; right: 45%;"></div>
-    <p style="width: 20%; position: absolute;top: 400%; right: 41%; color: white; font-family:'Courier New'; text-align: center; font-size: 60%;">Este projeto foi escrito para fins didáticos, PORTANTO, este projeto não tem razão nenhuma para ser comercializado. Esse projeto está livre de qualquer patente. Projeto criado na escola de São Jerônimo da Serra, "José Ferreira de Mello".</p>
+<animated id = "wateranimation" class="animation"><p>ÁGUA É VITAL</p></animated>
 
+<div class="square-create2" style="position: absolute; height: 40%;width: 100%; top:370%; left:0%;background: linear-gradient(to bottom, #111111 0%, #1b1b1b 100%);"><h1 style="font-size: 150%; text-align: center; position: inherit; top:20%; right: 45%;"></div>
+    <p class="finalCreds">Este projeto foi escrito para fins didáticos, PORTANTO, este projeto não tem razão nenhuma para ser comercializado. Esse projeto está livre de qualquer patente. Projeto criado na escola de São Jerônimo da Serra, "José Ferreira de Mello".</p>
+    <p class="finalCreds2">Originalmente escrito e programado com: Visual Studio Code.</p>
 </body>
 </html>
 
