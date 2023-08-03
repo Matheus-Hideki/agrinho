@@ -1,65 +1,200 @@
-.square-create
-{
-    background-color: #b1b2e2; 
-    position: absolute;
-}
-.square-create2
+.createSquare
 {
     position: absolute;
+    background: linear-gradient(to bottom, #42e773 0%, #42e773 100%);
 }
-body{
-    background-color: #ffffff; 
-
+.createSquare2
+{
+    position: absolute;
+    background: linear-gradient(to bottom, #42e773 0%, #42db70 100%);
+}
+.createSquare3
+{
+    position: absolute;
+    background: linear-gradient(to bottom, #34af59 0%, rgb(54, 182, 92) 100%);
+}
+.headBanner
+{
+    position: absolute;
+    height: 5vw;width: 100%; top:0vw; left:0vw;background: linear-gradient(to bottom, #42e773 0%, #42e773 100%);
 }
 h1{
-    color: black;
+    font-family:'Courier New';
+    position:absolute;
+    display: grid;
+    text-align: center;
+    font-size: 1.25vw;
+    left: 45.5vw;
+    top: 1vw;
 }
 p
 {
     color: black;
-    font-style: italic;
     text-align: center;
-}
-div{
-    color: black;
-}
-img{
-    position:absolute;
-}
-all1
-{
-    position:absolute;
-}
-.whiteFont{
-color: white;
-font-family:'Courier New';
+    font-size: 0.8vw; 
 }
 .diffFont
 {
     font-family:'Courier New';
+    position:absolute; font-size: 1vw; left:53vw; top:14vw; text-align: left; line-height: 150%; max-width: 43%;
 }
-inv
+.text1
 {
-    color: rgba(255, 255, 255, 0);
+    font-family:'Courier New';
+    position:absolute; font-size: 1vw; left:53vw; top:30vw; text-align: left; line-height: 150%; max-width: 43%; 
 }
+.text2
+{
+    font-family:'Courier New';
+    position:absolute; font-size: 0.8vw; left:20vw; top:50vw; text-align: left; line-height: 150%; max-width: 60%; 
+}
+.text3
+{
+    font-family:'Courier New';
+    position:absolute; font-size: 0.8vw; left:18vw; top:92vw; text-align: left; line-height: 150%; max-width: 60%; 
+}
+
+
+.greenLine
+{
+    color: rgba(129, 129, 129, 0);
+    position:absolute;
+    background: linear-gradient(to bottom, #42e773 0%, #42e773 100%);
+    height:100%;
+    width:1%;
+    top:0%;
+    left:0%;
+    font-size: 2vw;
+    min-width: 1%; 
+    max-width: 10%;
+}
+.planetIcon
+{
+position: absolute;
+height:4vw;
+width:4vw;
+top: 0.5vw;
+right: 0.5vw;
+bottom: 0.5vw;
+left: 0.5vw;
+}
+img{
+    position:absolute;
+}
+.subtitle2
+{
+    font-family: Copperplate, Papyrus, fantasy;
+    position:absolute;
+    display: grid;
+    text-align: center;
+    font-size: 4vw;
+    left: 17vw;
+    top: 45vw;
+}
+.continue1
+{
+    font-family:'Courier New';
+    position:absolute;
+    text-align: center;
+    font-size: 0.7vw;
+    left: 18%;
+    top: 105vw;
+    max-width: 60vw;
+}
+.continue1
+{
+    font-family:'Courier New';
+    position:absolute;
+    text-align: center;
+    font-size: 0.7vw;
+    left: 18%;
+    top: 105vw;
+    max-width: 60vw;
+}
+.img3
+{
+height:15vw;width: 25vw; left:15%; top: 114vw;
+}
+.img4
+{
+height:15vw;width: 25vw; left:3%; top: 129vw;
+}
+.img5
+{
+height:30vw;width: 60vw; left:20%; top: 220vw;
+}
+ul
+{
+    position: absolute;
+    font-size: 1vw;
+    height:22vw;width: 42vw; left:4%; top: 114vw; max-width: 20%;
+}
+.fontApply
+{
+    font-family:'Courier New';
+    position:absolute; font-size: 1.2vw; left:50vw; top:114vw; text-align: left; line-height: 150%; max-width:43vw;
+}
+.fontApply2
+{
+    font-family:'Courier New';
+    position:absolute; font-size: 1.1vw; left:52vw; top:117.5vw; text-align: left; line-height: 150%; max-width:43vw;
+}
+.improvisedList
+{
+    text-align: left;
+    font-size: 1vw; 
+    line-height: 1.2vw;
+}
+.ultText
+{
+    font-family:'Courier New';
+    position:absolute; font-size: 1.1vw; left:27vw; top:175vw; text-align: left; line-height: 150%; max-width: 45vw;
+}
+.ultIntext
+{
+    font-family:'Courier New';
+    position:absolute; font-size: 1vw; left:27vw; top:156vw; text-align: center; line-height: 150%; max-width: 45vw;
+}
+
+.planetAnimation
+{
+    position:absolute; left:46.5vw; top:230vw; text-align: center; line-height: 150%; max-width: 45vw;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation-name: earth;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+
+    
+}
+.txt1{
+    font-family:'Courier New';
+    font-style: italic;
+    position:absolute; font-size: 2vw; left:29vw; top:220vw; text-align: left; line-height: 150%; max-width: 45vw;
+
+    
+}
+.txt2{
+    font-family:'Courier New';
+    font-style: italic;
+    position:absolute; font-size: 2vw; left:26vw; top:242vw; text-align: right; line-height: 150%; max-width: 50vw;
+
+}
+@keyframes earth {
+    0%   {left:46.5vw; top:230.5vw;}
+    25% {left:46.45vw; top:229.5vw;}
+    50%   {left:46.4vw; top:230.5vw;}
+    75% {left:46.45vw; top:229.5vw;}
+    100% {left:46.5vw; top:230.5vw;}
+    }
 .finalCreds
 {
-    width: 20%; position: absolute;top: 400%; right: 41%; color: white; text-align: center; font-size: 60%;
+    position: absolute; top:278vw; color: white; max-width: 17vw; font-size: 0.6vw; left: 40vw;
 }
-.finalCreds2
+.animatedWaterVIAScript
 {
-    width: 20%; position: absolute;top: 405%; right: 41%; color: white; text-align: center; font-size: 60%;
-}
-animated
-{
-    color: rgba(107, 116, 196, 0);
-}
-id{
-    color: rgba(107, 116, 196, 0);
-}
-.animation
-{
-    position: absolute;top: 367%; right: 3%; text-align: right; font-size: 80%; width: 300%;
     font-family:'Courier New';
-    color: rgb(0, 0, 0);
+    font-style: italic;
+    position:absolute; font-size: 0.6vw; left:26vw; top:242vw; text-align: left; line-height: 150%; 
 }

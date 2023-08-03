@@ -1,110 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <link rel="stylesheet" href="style.css" type="text/css">
-    <script src="script.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desperdício</title>
-    <script src="script.js"></script>
+    <title>Água Vital.</title>
 </head>
-<body onload="Start()">
-    <script>
-    let x = 3;
-    let y = 0;
-    let copyAdditive = 18;
-    let local = "";
-    function Start()
-    {
-        const a = document.getElementById("wateranimation");
-        local = " " + a.textContent;
-        for(let i = 0; i < (copyAdditive - 1);i++)
+    <body onload="load1()">
+        <script>
+        let x = 0;
+        let y = 0;
+        let copy = 24;
+        let resetCase = 0;
+
+        function load1()
         {
-            a.textContent = a.textContent + local;
+            const an1 = document.getElementById("1");
+        an1.style.position = "absolute";
+        an1.style.left = "1vw";
+        an1.style.top = "263.5vw";
+        let sample =  an1.textContent;
+        for(let i = 0 ; i < copy;i++)
+        an1.textContent = an1.textContent + sample;
+
+            setInterval(startAnim,10);
         }
-        setInterval(updateWater, 10);
-    }
-
-
-    function updateWater()
-    {
-        const a = document.getElementById("wateranimation");
-        x = x + 0.05;
-        a.style.right = x + "%";
-
-        let cur = (x / 5 * 100).toString();
-        if(cur.includes("5"))
+        function startAnim()
         {
-        a.textContent = a.textContent + local; 
+            const an1 = document.getElementById("1");
+            x -= 0.05;
+            resetCase += 1;
+            an1.style.left = x + "vw";
+
+            if(resetCase == 1)
+            {
+                an1.textContent = an1.textContent + "ÁGUA ";
+            }
+            if(resetCase == 2)
+            {
+                an1.textContent = an1.textContent + "É ";
+            }
+            if(resetCase == 3)
+            {
+                an1.textContent = an1.textContent + "VIDA ";
+                resetCase = 0;
+            }
+
         }
-    }
-    </script>
-
-    <div class="square-create" style="height: 10%;width: 100%; top: 0%; left:0%;background: linear-gradient(to bottom, #42e773 0%, #42e773 100%);"><h1 style="font-size: 150%; text-align: center; font-family:'Courier New';position: inherit; top:20%; right: 42%;">Desperdício de Água.</h1></div>
-    <div><img src="planet-icon-14823.png" id="menuBar" style ="position:absolute; height: 8%;width: 4%; top:1%; line-height: 10%;"></img></div>
-    
-    <inv style="line-height: 700%;">SAMPLE TEXT.</inv>
-    
-    <p style="line-height: 40%;">"Para as pessoas e a Natureza, água é vida.</p>
-    <p style="line-height: 40%;">Contudo, os sistemas de água doce do planeta estão se extinguindo. Em todo o mundo, as populações de espécies monitoradas que vivem em água doce reduziram</p>
-    <p style="line-height: 40%;">em média 83% desde 1970. Já perdemos 64% das terras úmidas do planeta desde 1900, e apenas 37% dos rios mais longos permanecem desimpedidos e fluindo livremente."</p>
-    
-    <img src="https://img.freepik.com/fotos-gratis/closeup-tiro-de-uma-garrafa-de-agua-de-plastico-em-uma-mao-humana-perfeita-para-o-conceito-de-desperdicio-de-agua_181624-46747.jpg?w=996&t=st=1690286682~exp=1690287282~hmac=7f5d576a066323f04847932613682fce2e2f2f4691e02cdc14d9490175aeda4e" style ="height:50%;width: 45%; top:26.6%; left:4%"></img>
-    <div class="square-create" style="height: 50%;width: 47%; top:26.5%; left:52%;background: linear-gradient(to bottom, #42e773 0%, #42e773 100%);"></div>
-    <p style="position:absolute ; font-size: 120%; width: 45%; left:53%; top:26%; text-align: left; line-height: 150%;" class="diffFont">“De um lado, o estado [do Maranhão] fica mais distante da universalização do abastecimento de água para a sua população, que é, inclusive, uma meta nacional, estipulada pelo Marco Legal do Saneamento, e, paralelamente, isso leva a um cenário em que os investimentos em infraestrutura se tornam muito maiores para fazer com que a água chegue às pessoas. Por exemplo: na construção de equipamentos que não precisariam ser construídos, caso houvesse uma gestão adequada das perdas. Sem contar no consumo energético, no consumo de produtos químicos, no esforço de trabalho que está sendo pedido, também, para produzir uma água que sequer chega às pessoas”.</p>
-    <inv style="line-height: 3700%; position: relative; top:100%; right: 10%;">SAMPLE TEXT.</inv>
-
-    <p style="line-height: 40%;">Entre os dias 22 e 24 de março, líderes de todo o mundo estiveram reunidos em Nova Iorque para a Conferência da ONU sobre a Água – formalmente conhecida</p>
-    <p style="line-height: 40%;">como Conferência de 2023 para a Revisão Integral de Meio Termo da Implementação da Década das Nações Unidas para Ação sobre Água e Saneamento (2018-2028). </p>
-    
-    <div class="square-create" style="height: 56%;width: 46%; top:95.5%; left:24.5%;background: linear-gradient(to bottom, #42e773 0%, #42e773 100%);"><h1 style="font-size: 150%; text-align: center; position: inherit; top:20%; right: 45%;"></div>
-    <img style ="height:50%;width: 45%; left:25%; top: 96%;" src="https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/a/u/AUS_18537848714.jpg?crop=0%2C254%2C4368%2C2402&wid=2000&hei=1100&scl=2.184"></img>
-    <p style ="font-size:160%; position: absolute; text-align: center; right:51%; top: 145%;" class="whiteFont" >H2O</p>
+        </script>
 
 
-    <div class="square-create" style="position: absolute; height: 57%;width: 47%; top:160%; left:46%;background: linear-gradient(to bottom, #42e773 0%, #42e773 100%);"><h1 style="font-size: 150%; text-align: center; position: inherit; top:20%; right: 45%;"></div>
-    <all1 style="font-size: 120%; width: 45%; left:47%; top:160%; text-align: left; line-height: 150%;"  class="diffFont">
-    <p style="text-align: left;">"O que causa o desperdício de água?</p>
-        <ul style="text-align: left;">O desperdício de água tem quatro principais causas:
-            <li style="text-align: left;">O uso exagerado e pouco eficiente desse recurso natural. Nesses casos, o volume de água que é utilizado para a prática de determinada atividade ultrapassa a quantidade que seria, de fato, necessária para tal.</li>
-            <li style="text-align: left;">Problemas no transporte de água ou nas redes de abastecimento urbanas, industriais ou domésticas. Esses problemas incluem tubulações danificadas, infraestrutura deteriorada pelo tempo e acidentes de percurso.</li>
-            <li style="text-align: left;">Poluição e contaminação de mananciais, lençóis freáticos e de outras fontes naturais de água potável.</li>
-            <li style="text-align: left;">Superexploração de água e o manejo inadequado desse recurso natural, especialmente quando consideramos os agentes econômicos que são os maiores responsáveis pelo consumo de água na atualidade, como a agropecuária e a indústria."</li>
-        </ul>
-    </all1>
-    <img style ="height:40%;width: 40%; left:4%; top: 162%;" src="https://img.freepik.com/fotos-premium/salve-a-agua-gota-de-agua-da-torneira-de-agua-desperdicio-de-agua-torneira-de-grama-no-fundo-da-natureza_29266-74.jpg?w=2000"></img>
+        <div class="headBanner"></div>
+        <strong><h1>Água Vital.</h1></strong>
+        <div><img class="planetIcon" src="planet-icon-14823.png"></img></div>
+
+        <i style="position: absolute; font-size: 1vw; top:7vw; line-height: 40%; left: 19vw;">
+            <p>"Para as pessoas e a Natureza, água é vida.</p>
+            <p>Contudo, os sistemas de água doce do planeta estão se extinguindo. Em todo o mundo, as populações de espécies monitoradas que vivem em água doce reduziramem média 83% desde 1970.</p>
+            <p>Já perdemos 64% das terras úmidas do planeta desde 1900, e apenas 37% dos rios mais longos permanecem desimpedidos e fluindo livremente."</p>
+        </i>
+
+        <div class="createSquare2" style="height:25vw;width: 45%; top:15vw; left:3%"></div>
+        <div class="createSquare" style="height:25vw;width: 45%; top:14vw; left:52%"></div>
+        <img src="https://img.freepik.com/fotos-gratis/closeup-tiro-de-uma-garrafa-de-agua-de-plastico-em-uma-mao-humana-perfeita-para-o-conceito-de-desperdicio-de-agua_181624-46747.jpg?w=996&t=st=1690286682~exp=1690287282~hmac=7f5d576a066323f04847932613682fce2e2f2f4691e02cdc14d9490175aeda4e" style ="height:25vw;width: 45%; top:14vw; left:4%"></img>
+        <p class="diffFont">“De um lado, o estado [do Maranhão] fica mais distante da universalização do abastecimento de água para a sua população, que é, inclusive, uma meta nacional, estipulada pelo Marco Legal do Saneamento, e, paralelamente, isso leva a um cenário em que os investimentos em infraestrutura se tornam muito maiores para fazer com que a água chegue às pessoas. Por exemplo: na construção de equipamentos que não precisariam ser construídos, caso houvesse uma gestão adequada das perdas. Sem contar no consumo energético, no consumo de produtos químicos, no esforço de trabalho que está sendo pedido, também, para produzir uma água que sequer chega às pessoas”.</p>
+        <p class="text1">Em 2019, O Sistema Nacional de Informações sobre Saneamento (SNIS) apontou cerca de 39,2% da água potável do Brasil foi desperdiçada. O que para grau de comparação, com esta quantidade de água perdida seria suficiente para abastecer mais de 63 milhões de brasileiros em um ano.</p>
 
 
-    <div class="square-create" style="position: absolute; height: 90%;width: 53%; top:230%; left:25%;background: linear-gradient(to bottom, #42e773 0%, #42e773 100%);"><h1 style="font-size: 150%; text-align: center; position: inherit; top:20%; right: 45%;"></div>
+        <p class="subtitle2">A</p>
+        <p class="text2">poluição da água é um grande problema ambiental na Índia. A maior fonte de poluição da água na Índia é o esgoto não tratado. Outras fontes de poluição incluem escoamento agrícola e indústria de pequena escala não regulamentada. A maioria dos rios, lagos e águas superficiais na Índia estão poluídos devido a indústrias, esgoto não tratado e resíduos sólidos. Para estabelecer intervenções eficazes para melhorar a qualidade da água, os tomadores de decisão precisam de dados confiáveis, representativos e abrangentes. É estimado que cerca de 70% das águas superficiais na Índia são impróprias para consumo.</p>
+        <div class="createSquare2" style ="height:25vw;width: 45%; top:63vw; left:24%"></div>
+        <img src="https://th.bing.com/th/id/R.03459ce35e27ccab49e0ca9a47d3cc4f?rik=Wl3DyMtGXG%2bk3g&riu=http%3a%2f%2fwww.publico.es%2fuploads%2f2015%2f10%2f16%2f5621232d6a118.jpg&ehk=Ohs5XwU7R%2bmWndzTJOybAwHomJolByH3Zjhg%2bRg%2bM5Y%3d&risl=&pid=ImgRaw&r=0" style ="height:25vw;width: 45%; top:62vw; left:25%"></img>
+        <p class="text3">Todos os dias, <strong>quase 40 milhões de litros de águas residuais entram em rios e outros corpos d’água com apenas uma pequena fração adequadamente tratada.</strong> A falta de água potável tem um impacto significativo na saúde e na economia da Índia. <strong>O custo da degradação ambiental na Índia é estimado em INR 3,75 trilhões (US$ 80 bilhões) por ano. Os custos de saúde relacionados à poluição da água são estimados em cerca de INR 470-610 bilhões (US$ 6,7-8,7 bilhões por ano)</strong> – a maioria associada à mortalidade e morbidade diarreica de crianças menores de cinco anos e outras morbidades populacionais. Além do custo econômico, a falta de água, saneamento e higiene resulta na perda de <strong>400.000 vidas por ano na Índia.</strong></p>
 
 
-    <all1 style="text-align: center; top:230%; left: 29%; line-height: 150%; font-size: 120%;"  class="diffFont">
-        <p style="width: 60%;">"Como evitar o desperdício de água? A água doce, utilizada para o consumo humano, é um recurso bastante limitado no nosso planeta, pois representa somente 2% de todo o volume de água presente na Terra, e, desse, quase 70% estão congelados e represados nas geleiras. Por essa razão, é preciso evitar o desperdício de água e realizar o uso desse recurso natural de maneira sustentável. Algumas ações que diminuem ou impedem o desperdício de água estão listadas a seguir.</p>
+        <p class="continue1">Entre os dias 22 e 24 de março, líderes de todo o mundo estiveram reunidos em Nova Iorque para a Conferência da ONU sobre a Água – formalmente conhecida como Conferência de 2023 para a Revisão Integral de Meio Termo da Implementação da Década das Nações Unidas para Ação sobre Água e Saneamento (2018-2028).</p>
+
+        <div class="createSquare2" style ="height:33vw;width: 48vw; left:49%; top: 114vw;"></div>
+
+        <div class="createSquare3" style ="height:15vw;width: 25vw; left:14%; top: 113vw;"></div>
+        <div class="createSquare3" style ="height:15vw;width: 25vw; left:2%; top: 130vw;"></div>
+
+
+        <div class="createSquare2" style ="height:15vw;width: 25vw; left:16%; top: 115vw;"></div>
+        <div class="createSquare2" style ="height:15vw;width: 25vw; left:4%; top: 128vw;"></div>
+
+
+        <img class="img3" src="https://img.freepik.com/fotos-premium/salve-a-agua-gota-de-agua-da-torneira-de-agua-desperdicio-de-agua-torneira-de-grama-no-fundo-da-natureza_29266-74.jpg?w=2000"></img>
+        <img class="img4" src="https://media.metrolatam.com/2019/04/19/agua1-1aed53792553bb11c43ebdd806c51800-1200x0.jpg"></img>
+
+
+        <p class="fontApply" style="font-size: 1vw;">"O que causa o desperdício de água?</p>
+        <a class="fontApply2">
+                <li>Vazamentos em tubulações e torneiras</li>
+                <li>Irrigação excessiva de jardins e gramados</li>
+                <li>Banhos longos e uso excessivo de água em atividades domésticas</li>
+                <li>Lavagem de carros e calçadas com mangueira</li>
+                <li>Uso ineficiente de eletrodomésticos que consomem água, como máquinas de lavar roupa e louça</li>
+                <li>Falta de conscientização sobre a importância da conservação da água</li>
+                <li>Falta de incentivos para economizar água</li>
+                <li>Desperdício de água na agricultura, como irrigação ineficiente</li>
+                <li>Desperdício de água na indústria, como processos ineficientes ou vazamentos</li>
+                <li>Desperdício de água em edifícios públicos, como escolas e hospitais".</li>
+        </a>
+        <p class="fontApply" style="font-size: 1vw; top: 141vw;">Estes são apenas alguns exemplos de como a água utilizada de modo imprudente todos os dias.</p>
         
-        <ul style="text-align: left; position: absolute; right: 39%; width: 60%; top: 130%;">
 
-        <li>Inspeção periódica de encanamentos, registros e torneiras para a detecção de vazamentos.</li>
-        <li>Realização de reparos em vazamentos e outros problemas que provocam perdas de água.  </li>
-        <li>Ampliação das redes de distribuição de água e das redes de saneamento básico. </li>
-        <li>Incentivos governamentais para o tratamento e a reutilização de água da chuva para a realização de atividades, como lavar ruas e calçadas. </li>
-        <li>Ampliação do acesso à educação ambiental para a conscientização da população. </li>
-        <li>Adoção de métodos mais eficazes e controlados de uso da água em atividades que mais fazem uso desse recurso, em especial na agricultura e na indústria.</li>
-        <li>Desligar torneiras e chuveiros em momentos em que eles não sejam necessários. </li>
-        <li>Evitar lavar calçadas com mangueiras."
+        <div class="createSquare2" style ="height:51vw;width: 56vw; left:22vw; top:155vw;"></div>
 
-        </ul>
-</ul>
-</all1>
-<p style="width: 20%; position: absolute;top: 330%; right: 41%; text-align: center; font-size: 160%;"  class="diffFont">Diga não ao disperdício de água.</p>
 
-<div><img src="planet-icon-14823.png" id="menuBar" style ="height: 8%;width: 4%; top:347%; right: 49%;"></img></div>
+        <p class="ultIntext">"Como evitar o desperdício de água? A água doce, utilizada para o consumo humano, é um recurso bastante limitado no nosso planeta, pois representa somente 2% de todo o volume de água presente na Terra, e, desse, quase 70% estão congelados e represados nas geleiras. Por essa razão, é preciso evitar o desperdício de água e realizar o uso desse recurso natural de maneira sustentável. Algumas ações que diminuem ou impedem o desperdício de água estão listadas a seguir.</p>
+        
+        <a class="ultText">
+            <li>Inspeção periódica de encanamentos, registros e torneiras para a detecção de vazamentos.</li>
+            <li>Realização de reparos em vazamentos e outros problemas que provocam perdas de água.</li>
+            <li>Ampliação das redes de distribuição de água e das redes de saneamento básico.</li>
+            <li>Incentivos governamentais para o tratamento e a reutilização de água da chuva para a realização de atividades, como lavar ruas e calçadas.</li>
+            <li>Ampliação do acesso à educação ambiental para a conscientização da população.</li>
+            <li>Adoção de métodos mais eficazes e controlados de uso da água em atividades que mais fazem uso desse recurso, em especial na agricultura e na indústria.</li>
+            <li>Desligar torneiras e chuveiros em momentos em que eles não sejam necessários.</li>
+            <li>Evitar lavar calçadas com mangueiras."</li>
+        </a>
 
-<animated id = "wateranimation" class="animation"><p>ÁGUA É VITAL</p></animated>
 
-<div class="square-create2" style="position: absolute; height: 40%;width: 100%; top:370%; left:0%;background: linear-gradient(to bottom, #111111 0%, #1b1b1b 100%);"><h1 style="font-size: 150%; text-align: center; position: inherit; top:20%; right: 45%;"></div>
-    <p class="finalCreds">Este projeto foi escrito para fins didáticos, PORTANTO, este projeto não tem razão nenhuma para ser comercializado. Esse projeto está livre de qualquer patente. Projeto criado na escola de São Jerônimo da Serra, "José Ferreira de Mello".</p>
-    <p class="finalCreds2">Originalmente escrito e programado com: Visual Studio Code.</p>
-</body>
+        <p class="txt1" id = "an1">Você tem toda a água que precisa.</p>
+
+        <div class="planetAnimation"><img class="planetIcon" src="rotation.gif"></img></div>
+        <p class="txt2">Mas os seus filhos terão a mesma sorte?</p>
+
+        <p class="animatedWaterVIAScript" id="1">ÁGUA É VIDA </p>
+
+        <div class="square-create2" style="position: absolute; height: 34%;width: 100%; top:265vw; left:0%;background: linear-gradient(to bottom, #111111 0%, #1b1b1b 100%);"><h1 style="font-size: 150%; text-align: center; position: inherit; top:20%; right: 45%;"></div>
+            <p class="finalCreds">Este projeto foi escrito para fins didáticos, PORTANTO, este projeto não tem razão nenhuma para ser comercializado. Esse projeto está livre de qualquer patente. Projeto criado na escola de São Jerônimo da Serra, "José Ferreira de Mello". Originalmente escrito e programado com a ferramenta Visual Studio Code.</p>
+    </body>
 </html>
 
