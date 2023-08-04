@@ -13,6 +13,7 @@
         let y = 0;
         let copy = 24;
         let resetCase = 0;
+        let divBy = 15;
 
         function load1()
         {
@@ -29,22 +30,23 @@
         function startAnim()
         {
             const an1 = document.getElementById("1");
-            x -= 0.05;
+            x -= 1 / divBy;
             resetCase += 1;
             an1.style.left = x + "vw";
 
             if(resetCase == 1)
             {
-                an1.textContent = an1.textContent + "ÁGUA ";
+                //an1.textContent = an1.textContent + "ÁGUA ";
             }
-            if(resetCase == 2)
+            if(resetCase == 2.5)
             {
-                an1.textContent = an1.textContent + "É ";
+                //an1.textContent = an1.textContent + "É ";
             }
-            if(resetCase == 3)
+            if(resetCase == 64)
             {
-                an1.textContent = an1.textContent + "VIDA ";
+                //an1.textContent = an1.textContent + "VIDA ";
                 resetCase = 0;
+                x = 0;
             }
 
         }
